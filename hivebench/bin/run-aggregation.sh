@@ -26,8 +26,12 @@ DIR=`cd $bin/../; pwd`
 # path check
 rm -rf ${DIR}/metastore_db
 rm -rf ${DIR}/TempStatsStore
-$HADOOP_EXECUTABLE fs -rmr /user/hive/warehouse/uservisits_aggre
-$HADOOP_EXECUTABLE fs -rmr /tmp
+
+## lingkun
+#$HADOOP_EXECUTABLE fs -rmr /user/hive/warehouse/uservisits_aggre
+#$HADOOP_EXECUTABLE fs -rmr /tmp
+rm -rf ${OUTPUT_HDFS}/uservisits_aggre
+
 
 # pre-running
 echo "USE DEFAULT;" > $DIR/hive-benchmark/uservisits_aggre.hive
@@ -59,5 +63,9 @@ $HIVE_HOME/bin/hive -f $DIR/hive-benchmark/uservisits_aggre.hive
 END_TIME=`timestamp`
 gen_report "HIVEAGGR" ${START_TIME} ${END_TIME} ${SIZE}
 
-$HADOOP_EXECUTABLE fs -rmr $OUTPUT_HDFS/hive-aggre
-$HADOOP_EXECUTABLE fs -cp /user/hive/warehouse/uservisits_aggre $OUTPUT_HDFS/hive-aggre
+#$HADOOP_EXECUTABLE fs -rmr $OUTPUT_HDFS/hive-aggre
+#$HADOOP_EXECUTABLE fs -cp /user/hive/warehouse/uservisits_aggre $OUTPUT_HDFS/hive-aggre
+
+rm -rf $OUTPUT_HDFS/hive-aggre
+cp $OUTPUT_HDFS/uservisits_aggre $OUTPUT_HDFS/hive-aggre
+

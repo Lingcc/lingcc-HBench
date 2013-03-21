@@ -73,7 +73,8 @@ public class TestDFSIO extends Configured implements Tool {
   private static final Log LOG = FileInputFormat.LOG;
   private static Configuration fsConfig = new Configuration();
   private static final long MEGA = 0x100000;
-  private static String TEST_ROOT_DIR = System.getProperty("test.build.data","/benchmarks/TestDFSIO");
+  //private static String TEST_ROOT_DIR = System.getProperty("test.build.data","/benchmarks/TestDFSIO");
+  private static String TEST_ROOT_DIR = System.getProperty("test.build.data","/home/lingkun/Develop/hadoopData/hdfs/benchmarks/TestDFSIO");
   private static Path CONTROL_DIR = new Path(TEST_ROOT_DIR, "io_control");
   private static Path WRITE_DIR = new Path(TEST_ROOT_DIR, "io_write");
   private static Path READ_DIR = new Path(TEST_ROOT_DIR, "io_read");

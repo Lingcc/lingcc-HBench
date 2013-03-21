@@ -31,7 +31,8 @@ else
 fi
 
 # path check
-$HADOOP_EXECUTABLE dfs -rmr ${OUTPUT_HDFS}
+#$HADOOP_EXECUTABLE dfs -rmr ${OUTPUT_HDFS}
+rm -rf ${OUTPUT_HDFS}
 
 # pre-running
 SSIZE=$($HADOOP_EXECUTABLE job -history $INPUT_SAMPLE | grep 'HiBench.Counters.*|BYTES_DATA_GENERATED')

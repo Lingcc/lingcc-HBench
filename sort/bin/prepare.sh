@@ -24,7 +24,8 @@ DIR=`cd $bin/../; pwd`
 . "${DIR}/conf/configure.sh"
 
 # path check
-$HADOOP_EXECUTABLE dfs -rmr $INPUT_HDFS
+#$HADOOP_EXECUTABLE dfs -rmr $INPUT_HDFS
+rm -rf $INPUT_HDFS
 
 # compress check
 if [ $COMPRESS -eq 1 ]; then

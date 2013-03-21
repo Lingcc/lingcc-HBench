@@ -24,6 +24,9 @@ if [ -f $HIBENCH_REPORT ]; then
 fi
 
 for benchmark in `cat $DIR/conf/benchmarks.lst`; do
+    echo "== delete /tmp/hadoop-lingkun/mapred/staging/"
+    sudo rm -rf /tmp/hadoop-lingkun/mapred/staging/
+  
     if [[ $benchmark == \#* ]]; then
         continue
     fi

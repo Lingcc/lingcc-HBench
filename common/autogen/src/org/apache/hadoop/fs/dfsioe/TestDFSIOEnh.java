@@ -93,7 +93,9 @@ public class TestDFSIOEnh extends Configured implements Tool {
   private static final String BASE_FILE_NAME = "test_io_";
   private static final String DEFAULT_RES_FILE_NAME = "TestDFSIOEnh_results.log";
 
-  private static String TEST_ROOT_DIR = System.getProperty("test.build.data","/benchmarks/TestDFSIO-Enh");
+  // private static String TEST_ROOT_DIR = System.getProperty("test.build.data","/benchmarks/TestDFSIO-Enh");
+  private static String TEST_ROOT_DIR = System.getProperty("test.build.data","/home/lingkun/Develop/hadoopData/hdfs/benchmarks/TestDFSIO");
+
   private static Configuration fsConfig = new Configuration();
   private static Path CONTROL_DIR = new Path(TEST_ROOT_DIR, "io_control");
   protected static Path WRITE_DIR = new Path(TEST_ROOT_DIR, "io_write");

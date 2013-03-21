@@ -33,7 +33,8 @@ else
 fi
 
 # path check
-$HADOOP_EXECUTABLE dfs -rmr $INPUT_HDFS
+#$HADOOP_EXECUTABLE dfs -rmr $INPUT_HDFS
+rm -rf $INPUT_HDFS
 
 # generate data
 $HADOOP_EXECUTABLE jar $HADOOP_EXAMPLES_JAR randomtextwriter \

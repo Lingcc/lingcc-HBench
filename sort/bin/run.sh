@@ -34,7 +34,8 @@ else
 fi
 
 #path check
-$HADOOP_EXECUTABLE dfs -rmr $OUTPUT_HDFS
+#$HADOOP_EXECUTABLE dfs -rmr $OUTPUT_HDFS
+rm -rf $OUTPUT_HDFS
 
 # pre-running
 SIZE=$($HADOOP_EXECUTABLE job -history $INPUT_HDFS | grep 'org.apache.hadoop.examples.RandomTextWriter$Counters.*|BYTES_WRITTEN')

@@ -102,7 +102,8 @@ fi
 HADOOP_CONF_DIR="${HADOOP_CONF_DIR:-$HADOOP_HOME/conf}"
 
 # base dir HDFS
-export DATA_HDFS=/HiBench
+#export DATA_HDFS=/HiBench
+export DATA_HDFS=${HOME}/Develop/hadoopData/hdfs
 
 # local report
 export HIBENCH_REPORT=${HIBENCH_HOME}/hibench.report
