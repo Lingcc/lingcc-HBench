@@ -1,5 +1,6 @@
 Unjar Performance Test
 ======================
+This benchmark contains a lot of MetaServer(Namenode) queries. Mainly about: FileName and status Lookup: During the unjar. There is lots of query. fs.create() will try to check whether each of its parents exists, which will case meta query.
 
 # How to  run
 
